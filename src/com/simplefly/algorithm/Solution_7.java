@@ -45,7 +45,12 @@ public class Solution_7 {
     }
     
     public static void main(String[] args) {
-    	System.out.println(new Solution_7().Fibonacci_dynamic(3));
-    	
+    	Solution_7 testObj = new Solution_7();
+    	for(int i = 0; i < 40; i++) {
+    		if(testObj.Fibonacci(i) != testObj.Fibonacci_dynamic(i)) {
+    			System.out.println("error with: " + i);
+    		}
+    	}
+    	System.out.println("finish");
     }
 }
